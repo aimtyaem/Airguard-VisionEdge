@@ -1,20 +1,71 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Airguard VisionEdge
 
-# Run and deploy your AI Studio app
+**Airguard VisionEdge** is a concept for an advanced system that enables environmental researchers and on-site analysts to detect, visualize, and interpret greenhouse gas (GHG) anomalies in near-real-time using a fusion of Edge AI and satellite data.
 
-This contains everything you need to run your app locally.
+## 🌍 Concept Summary
 
-View your app in AI Studio: https://ai.studio/apps/drive/1v-6gmO3NbzaoIYMnQoFR10ib-7kjQWrO
+**Purpose:** To enable environmental researchers and on-site analysts to detect, visualize, and interpret greenhouse gas (GHG) anomalies in near-real-time using Edge AI + satellite fusion.
 
-## Run Locally
+## System Architecture
 
-**Prerequisites:**  Node.js
+The system is designed with three core layers:
 
+1.  **Edge Impulse Node:**
+    * Runs optimized Machine Learning models (TinyML) for local emission pattern detection.
+    * Performs inference on satellite raster tiles and ground sensor data (e.g., $CO_2$, $PM2.5$).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2.  **Web Dashboard (Android-first):**
+    * Displays fused insights through interactive maps, charts, and anomaly markers.
+    * Syncs with Google Colab notebooks for advanced analytics and deep-dive visualization.
+
+3.  **LLM Assistant (VisionEdge Copilot):**
+    * An on-device LLM assistant that explains observed trends.
+    * Recommends research insights and provides context for data anomalies.
+
+## 📱 UX Flow Overview
+
+1.  **Login & Device Sync Screen**
+    * Users sign in via Google or their institutional account.
+    * Sync connected Edge Impulse devices via Bluetooth/WiFi.
+    * The "Add New Station" feature detects and registers a local AI node.
+
+2.  **Home Dashboard**
+    * **Top Bar:** "VisionEdge" title with quick filters (Region | Model | Timeframe).
+    * **Live Map Panel:** Displays raster data tiles with overlay layers for GHG, $NO_2$, and temperature. Edge inferences are highlighted as colored hotspots.
+    * **Mini Stats Bar:** Shows key metrics like Emission Index, Confidence Level, and Anomaly Count. Tapping opens an expanded metrics view.
+
+3.  **Analysis Panel**
+    * Organized into tabs: `AI Inference` | `Time Series` | `Correlations` | `Ground Data`.
+    * Features interactive plots generated from Edge outputs.
+    * An "Open in Colab" option launches a notebook session with linked data for deeper analysis.
+
+4.  **Copilot Assistant**
+    * A floating chat widget allows users to "Ask VisionEdge Copilot."
+    * Users can query the system with natural language, e.g., *“Explain today’s emission spike in the Cairo region”* to receive an AI-driven explanation.
+
+5.  **Export & Share**
+    * Download comprehensive reports as PDF or GeoTIFF files.
+    * Push results directly to a shared research group or an institutional drive.
+
+## 🎨 Design Direction
+
+* **Theme:** A space black background with green-cyan gradients to represent emission heatmaps.
+* **UI Style:** Sleek and minimal, following Material 3 design principles with a card-based layout.
+* **Interactions:** Smooth map transitions, animated data updates, and collapsible charts for a fluid user experience.
+* **Data Visualization:**
+    * 2D raster overlays with opacity controls.
+    * Dynamic graphs for comparing local inferences and historical data.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome.
+For significant contributions, please propose an issue first to discuss what you would like to change.
+
+## License
+
+Licensed under the MIT License. See `LICENSE` for details.
+
+## Authors
+
+* [Ahmed Ibrahim Metawee]
+* [AIMTY]
