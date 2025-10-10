@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisionEdge GHG Anomaly Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "background-dark": "#111816",
+                        "background-darker": "#0C0C0D",
+                        "surface": "#1A2C27",
+                        "surface-accent": "#283935",
+                        "text-primary": "#EAEAEA",
+                        "text-secondary": "#9db9b2",
+                        "copilot-primary": "#48D1CC",
+                        "copilot-background": "#0C0C0C",
+                        "copilot-widget": "#1A1A1A",
+                        "copilot-text-primary": "#F0F0F0",
+                        "copilot-text-secondary": "#888888",
+                        "positive": "#39FF14",
+                        "negative": "#fa5838",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+            plugins: [
+                require('@tailwindcss/forms'),
+            ],
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+  }
+}
+</script>
+</head>
+<body class="bg-background-dark font-display">
+    <div id="root"></div>
+</body>
+</html>

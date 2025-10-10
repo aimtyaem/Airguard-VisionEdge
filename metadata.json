@@ -1,0 +1,5 @@
+{
+  "name": "Airguard VisionEdge GHG Anomaly Detector",
+  "description": "An interactive web application for detecting, visualizing, and analyzing Greenhouse Gas (GHG) anomalies using advanced AI models. It features a dashboard with a global map view, detailed trend charts, and an AI-powered copilot for data analysis.",
+  "requestFramePermissions": []
+}
