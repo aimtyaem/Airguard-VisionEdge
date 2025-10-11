@@ -35,6 +35,7 @@ const Sidebar: React.FC = () => {
                     <nav className="flex flex-col gap-2">
                         <NavItem to="/dashboard" icon="dashboard" label="Dashboard" />
                         <NavItem to="/analysis" icon="pie_chart" label="Analysis" isFilled={true} />
+                        <NavItem to="/ingestion" icon="upload" label="Ingestion" />
                         <NavItem to="/reports" icon="folder" label="Reports" />
                         <NavItem to="/settings" icon="settings" label="Settings" />
                     </nav>
