@@ -1,5 +1,5 @@
 # Airguard VisionEdge
-![logo](logo.gif)
+![logo](img/logo.gif)
 **Airguard VisionEdge** is a concept for an advanced system that enables environmental researchers and on-site analysts to detect, visualize, and interpret greenhouse gas (GHG) anomalies in near-real-time using a fusion of Edge AI and satellite data.
 
 ## 🌍 Concept Summary
