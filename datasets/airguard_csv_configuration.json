@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "fileName": "processed_aqi_dataset_with_features.csv",
+    "created": 1760358208680,
+    "delimiter": ",",
+    "skipFirstLines": 0,
+    "spec": {
+        "type": "timeseries-row",
+        "labelsColumn": "aqi",
+        "valueColumns": [
+            "temperature",
+            "temperature_lag1",
+            "temperature_lag3",
+            "temperature_lag7",
+            "temperature_roll7",
+            "temperature^2",
+            "temperature temperature_lag1",
+            "temperature temperature_lag3",
+            "temperature temperature_lag7",
+            "temperature temperature_roll7",
+            "temperature_lag1^2",
+            "temperature_lag1 temperature_lag3",
+            "temperature_lag1 temperature_lag7",
+            "temperature_lag1 temperature_roll7",
+            "temperature_lag3^2",
+            "temperature_lag3 temperature_lag7",
+            "temperature_lag3 temperature_roll7",
+            "temperature_lag7^2",
+            "temperature_lag7 temperature_roll7",
+            "temperature_roll7^2"
+        ],
+        "timestamp": {
+            "type": "fixed-frequency",
+            "frequency": 0.000011574
+        },
+        "dealWithMultipleLabels": "multiple-labels"
+    }
+}
