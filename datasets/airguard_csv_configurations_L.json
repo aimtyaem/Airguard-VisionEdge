@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "fileName": "folder_based_labels.txt",
+    "created": 1760533848786,
+    "delimiter": ",",
+    "skipFirstLines": 0,
+    "spec": {
+        "type": "features",
+        "valueColumns": [
+            "ABOUT_THE_DATA"
+        ]
+    }
+}
