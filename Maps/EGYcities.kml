@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>خريطة كوروبليث: مؤشر الغطاء النباتي (NDVI) في مصر</name>
+    <description>
+      <![CDATA[
+        <h1>خريطة كوروبليث موضوعية (Thematic Choropleth Map)</h1>
+        <p>توضح هذه الخريطة توزيع متوسط مؤشر الاختلاف الخضري المتمايز (NDVI) المستخلص من بيانات الأقمار الصناعية عبر المحافظات المصرية.</p>
+        <p><b>طريقة التصنيف الإحصائي المستخدمة:</b> فواصل جينكس الطبيعية (Jenks Natural Breaks).</p>
+      ]]>
+    </description>
+
+    <!-- تعريف الأنماط اللونية للتدرج المتسلسل (Sequential Palette) -->
+    <!-- التدرج يعتمد على تنسيق ABGR (Alpha, Blue, Green, Red) في ملفات KML -->
+
+    <!-- الفئة 1: صحراء / غطاء نباتي شبه منعدم (NDVI: 0.0 - 0.1) - لون أصفر رملي -->
+    <Style id="ndvi-very-low">
+      <LineStyle>
+        <color>ffcccccc</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff9fd1f5</color> <!-- ABGR لـ #f5d19f (رملي فاتح) -->
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <div style="direction: rtl; font-family: Arial, sans-serif; padding: 10px;">
+            <h3 style="color: #b25e00;">$[name]</h3>
+            <table border="1" style="border-collapse: collapse; width: 100%; text-align: right;">
+              <tr style="background-color: #f5d19f;">
+                <th style="padding: 5px;">المؤشر</th>
+                <th style="padding: 5px;">القيمة</th>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">متوسط NDVI</td>
+                <td style="padding: 5px;"><b>$[NDVI_Value]</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">التصنيف البيئي</td>
+                <td style="padding: 5px; color: #b25e00;"><b>قاحل / صحراوي</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">المصدر الاستشعاري</td>
+                <td style="padding: 5px;">Sentinel-2 & MODIS</td>
+              </tr>
+            </table>
+          </div>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <!-- الفئة 2: غطاء نباتي منخفض / تداخل حضري (NDVI: 0.11 - 0.25) - لون أخضر مصفر فاتح -->
+    <Style id="ndvi-low">
+      <LineStyle>
+        <color>ffbbbbbb</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ffbee1a5</color> <!-- ABGR لـ #a5e1be (أخضر فستقي باهت) -->
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <div style="direction: rtl; font-family: Arial, sans-serif; padding: 10px;">
+            <h3 style="color: #4a7c2a;">$[name]</h3>
+            <table border="1" style="border-collapse: collapse; width: 100%; text-align: right;">
+              <tr style="background-color: #a5e1be;">
+                <th style="padding: 5px;">المؤشر</th>
+                <th style="padding: 5px;">القيمة</th>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">متوسط NDVI</td>
+                <td style="padding: 5px;"><b>$[NDVI_Value]</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">التصنيف البيئي</td>
+                <td style="padding: 5px; color: #4a7c2a;"><b>غطاء نباتي منخفض / نسيج عمراني</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">المصدر الاستشعاري</td>
+                <td style="padding: 5px;">Sentinel-2 & MODIS</td>
+              </tr>
+            </table>
+          </div>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <!-- الفئة 3: غطاء نباتي متوسط (NDVI: 0.26 - 0.5) - لون أخضر عشبي متوسط -->
+    <Style id="ndvi-moderate">
+      <LineStyle>
+        <color>ff999999</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff60b542</color> <!-- ABGR لـ #42b560 (أخضر متوسط) -->
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <div style="direction: rtl; font-family: Arial, sans-serif; padding: 10px;">
+            <h3 style="color: #217334;">$[name]</h3>
+            <table border="1" style="border-collapse: collapse; width: 100%; text-align: right;">
+              <tr style="background-color: #42b560; color: white;">
+                <th style="padding: 5px;">المؤشر</th>
+                <th style="padding: 5px;">القيمة</th>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">متوسط NDVI</td>
+                <td style="padding: 5px;"><b>$[NDVI_Value]</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">التصنيف البيئي</td>
+                <td style="padding: 5px; color: #217334;"><b>غطاء نباتي متوسط / زراعة مختلطة</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">المصدر الاستشعاري</td>
+                <td style="padding: 5px;">Sentinel-2 & MODIS</td>
+              </tr>
+            </table>
+          </div>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <!-- الفئة 4: غطاء نباتي كثيف جداً (NDVI: 0.51 - 0.8) - لون أخضر غامق (أراضي الدلتا الطينية الخصبة) -->
+    <Style id="ndvi-high">
+      <LineStyle>
+        <color>ff555555</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff2d7a15</color> <!-- ABGR لـ #157a2d (أخضر داكن خصب) -->
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <div style="direction: rtl; font-family: Arial, sans-serif; padding: 10px;">
+            <h3 style="color: #0f4d1a;">$[name]</h3>
+            <table border="1" style="border-collapse: collapse; width: 100%; text-align: right;">
+              <tr style="background-color: #157a2d; color: white;">
+                <th style="padding: 5px;">المؤشر</th>
+                <th style="padding: 5px;">القيمة</th>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">متوسط NDVI</td>
+                <td style="padding: 5px;"><b>$[NDVI_Value]</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">التصنيف البيئي</td>
+                <td style="padding: 5px; color: #0f4d1a;"><b>زراعي كثيف جداً (قلب الدلتا)</b></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">المصدر الاستشعاري</td>
+                <td style="padding: 5px;">Sentinel-2 & MODIS</td>
+              </tr>
+            </table>
+          </div>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+
+    <!-- المجلد الرئيسي للمعالم الجغرافية للمحافظات -->
+    <Folder>
+      <name>المحافظات الممثلة كارتوجرافياً</name>
+
+      <!-- 1. محافظة الوادي الجديد (تمثيل النطاق الصحراوي الشاسع - قيمة NDVI منخفضة جداً) -->
+      <Placemark>
+        <name>محافظة الوادي الجديد</name>
+        <styleUrl>#ndvi-very-low</styleUrl>
+        <ExtendedData>
+          <Data name="NDVI_Value">
+            <value>0.04</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <tessellate>1</tessellate>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                25.00,22.00,0 
+                30.00,22.00,0 
+                30.00,26.00,0 
+                29.00,28.00,0 
+                25.00,28.00,0 
+                25.00,22.00,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- 2. محافظة البحر الأحمر (نطاق صحراوي وجبلي ساحلي - قيمة NDVI منخفضة جداً) -->
+      <Placemark>
+        <name>محافظة البحر الأحمر</name>
+        <styleUrl>#ndvi-very-low</styleUrl>
+        <ExtendedData>
+          <Data name="NDVI_Value">
+            <value>0.06</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <tessellate>1</tessellate>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                32.50,28.50,0 
+                34.00,27.50,0 
+                35.50,24.00,0 
+                36.50,22.00,0 
+                32.50,22.00,0 
+                32.00,25.00,0 
+                32.50,28.50,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- 3. محافظة القاهرة (كثافة عمرانية وتداخل خضري بسيط - قيمة NDVI منخفضة) -->
+      <Placemark>
+        <name>محافظة القاهرة</name>
+        <styleUrl>#ndvi-low</styleUrl>
+        <ExtendedData>
+          <Data name="NDVI_Value">
+            <value>0.18</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <tessellate>1</tessellate>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                31.20,30.15,0 
+                31.45,30.15,0 
+                31.45,29.90,0 
+                31.20,29.90,0 
+                31.20,30.15,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- 4. محافظة أسوان (شريط زراعي حول نهر النيل محاط بالصحراء - قيمة NDVI متوسطة) -->
+      <Placemark>
+        <name>محافظة أسوان</name>
+        <styleUrl>#ndvi-moderate</styleUrl>
+        <ExtendedData>
+          <Data name="NDVI_Value">
+            <value>0.32</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <tessellate>1</tessellate>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                32.40,24.50,0 
+                33.10,24.50,0 
+                33.10,23.50,0 
+                32.40,23.50,0 
+                32.40,24.50,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- 5. محافظة الدقهلية (قلب الدلتا الخصب والزراعة الكثيفة - قيمة NDVI مرتفعة جداً) -->
+      <Placemark>
+        <name>محافظة الدقهلية</name>
+        <styleUrl>#ndvi-high</styleUrl>
+        <ExtendedData>
+          <Data name="NDVI_Value">
+            <value>0.68</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <tessellate>1</tessellate>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                31.15,31.45,0 
+                31.60,31.45,0 
+                31.60,30.90,0 
+                31.15,30.90,0 
+                31.15,31.45,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+    </Folder>
+  </Document>
+</kml>
+
