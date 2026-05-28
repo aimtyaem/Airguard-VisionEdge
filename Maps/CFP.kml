@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Illustrative LST &amp; Carbon Footprint - Egyptian Cities</name>
+    <description>
+      A hypothetical Choropleth map demonstrating the visualization of Land Surface Temperature (LST) and Carbon Footprint data. 
+      Data is strictly illustrative and intended to show KML structural capabilities for GIS representation.
+    </description>
+
+    <!-- Define Choropleth Color Styles (Format: aabbggrr) -->
+    
+    <!-- Low Level: Semi-transparent Green -->
+    <Style id="level_low">
+      <PolyStyle>
+        <color>7d00ff00</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- Medium Level: Semi-transparent Yellow -->
+    <Style id="level_medium">
+      <PolyStyle>
+        <color>7d00ffff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- High Level: Semi-transparent Orange -->
+    <Style id="level_high">
+      <PolyStyle>
+        <color>7d00a5ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- Critical Level: Semi-transparent Red -->
+    <Style id="level_critical">
+      <PolyStyle>
+        <color>7d0000ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- Placemarks (Polygons representing cities/regions) -->
+
+    <!-- 1. Cairo (Representing High Density / Critical UHI) -->
+    <Placemark>
+      <name>Greater Cairo Region</name>
+      <styleUrl>#level_critical</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>42.5 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+5.2 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>18,500</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [41.1, 43.8]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              31.100,30.150,0
+              31.450,30.150,0
+              31.450,29.850,0
+              31.100,29.850,0
+              31.100,30.150,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 2. Alexandria (Representing Coastal / Medium UHI) -->
+    <Placemark>
+      <name>Alexandria Governorate</name>
+      <styleUrl>#level_medium</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>34.2 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+2.1 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>7,200</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [33.5, 35.0]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              29.800,31.300,0
+              30.150,31.300,0
+              30.150,31.050,0
+              29.800,31.050,0
+              29.800,31.300,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 3. Mansoura (Representing Delta Urbanization / High UHI) -->
+    <Placemark>
+      <name>Mansoura City</name>
+      <styleUrl>#level_high</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>38.7 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+3.8 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>3,400</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [37.9, 39.5]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              31.330,31.070,0
+              31.420,31.070,0
+              31.420,31.010,0
+              31.330,31.010,0
+              31.330,31.070,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 4. Aswan (Representing Arid / Critical Baseline LST but Low UHI Delta) -->
+    <Placemark>
+      <name>Aswan City</name>
+      <styleUrl>#level_critical</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>45.1 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+1.5 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>1,100</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [44.2, 46.0]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              32.850,24.120,0
+              32.950,24.120,0
+              32.950,24.050,0
+              32.850,24.050,0
+              32.850,24.120,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+  </Document>
+</kml>
