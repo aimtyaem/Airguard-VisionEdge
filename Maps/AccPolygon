@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Illustrative LST &amp; Carbon Footprint - Egyptian Cities (Helwan, 10th of Ramadan, El-Mahalla)</name>
+    <description>
+      A hypothetical Choropleth map demonstrating the visualization of Land Surface Temperature (LST) and Carbon Footprint data for three Egyptian cities. 
+      Data is strictly illustrative and intended to show KML structural capabilities for GIS representation. Polygons represent approximate city boundaries.
+    </description>
+
+    <!-- Define Choropleth Color Styles (Format: aabbggrr) -->
+    <!-- Low Level: Semi-transparent Green -->
+    <Style id="level_low">
+      <PolyStyle>
+        <color>7d00ff00</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- Medium Level: Semi-transparent Yellow -->
+    <Style id="level_medium">
+      <PolyStyle>
+        <color>7d00ffff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- High Level: Semi-transparent Orange -->
+    <Style id="level_high">
+      <PolyStyle>
+        <color>7d00a5ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- Critical Level: Semi-transparent Red -->
+    <Style id="level_critical">
+      <PolyStyle>
+        <color>7d0000ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+
+    <!-- 1. Helwan (Heavy industry, high carbon footprint, critical UHI) -->
+    <Placemark>
+      <name>Helwan</name>
+      <styleUrl>#level_critical</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>43.1 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+4.5 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>14,200</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [42.1, 44.0]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              31.28,29.82,0
+              31.38,29.82,0
+              31.38,29.89,0
+              31.28,29.89,0
+              31.28,29.82,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 2. Tenth of Ramadan (Industrial new city, high LST and emissions) -->
+    <Placemark>
+      <name>Tenth of Ramadan City</name>
+      <styleUrl>#level_high</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>39.8 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+3.2 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>9,500</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [39.0, 40.5]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              31.63,30.27,0
+              31.72,30.27,0
+              31.72,30.34,0
+              31.63,30.34,0
+              31.63,30.27,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 3. El-Mahalla El-Kubra (Dense urban &amp; textile hub, medium-high impact) -->
+    <Placemark>
+      <name>El-Mahalla El-Kubra</name>
+      <styleUrl>#level_medium</styleUrl>
+      <ExtendedData>
+        <Data name="Estimated LST (Summer Avg)">
+          <value>37.5 °C</value>
+        </Data>
+        <Data name="UHI Intensity (Delta T)">
+          <value>+2.9 °C</value>
+        </Data>
+        <Data name="Carbon Footprint (kTon CO2e/yr)">
+          <value>5,400</value>
+        </Data>
+        <Data name="Monte Carlo Confidence Interval">
+          <value>95% [36.9, 38.0]</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              31.12,30.94,0
+              31.22,30.94,0
+              31.22,31.02,0
+              31.12,31.02,0
+              31.12,30.94,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+  </Document>
+</kml>
