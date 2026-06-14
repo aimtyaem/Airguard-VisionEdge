@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<name>Egyptian Cities Environmental Assessment</name>
+
+<Style id="cityStyle">
+    <IconStyle>
+        <scale>1.2</scale>
+    </IconStyle>
+</Style>
+
+<Folder>
+    <name>Helwan</name>
+
+    <Placemark>
+        <name>Helwan</name>
+        <styleUrl>#cityStyle</styleUrl>
+        <Point>
+            <coordinates>31.3000,29.8414,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Folder>
+        <name>Summer 2020</name>
+
+        <GroundOverlay>
+            <name>LST 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_LST2020_MAPID/{z}/{x}/{y}?token=HELWAN_LST2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_UHI2020_MAPID/{z}/{x}/{y}?token=HELWAN_UHI2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_CO22020_MAPID/{z}/{x}/{y}?token=HELWAN_CO22020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRECIP2020_MAPID/{z}/{x}/{y}?token=HELWAN_PRECIP2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRESS2020_MAPID/{z}/{x}/{y}?token=HELWAN_PRESS2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_TEMP2020_MAPID/{z}/{x}/{y}?token=HELWAN_TEMP2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_WIND2020_MAPID/{z}/{x}/{y}?token=HELWAN_WIND2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Summer 2024</name>
+
+        <GroundOverlay>
+            <name>LST 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_LST2024_MAPID/{z}/{x}/{y}?token=HELWAN_LST2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_UHI2024_MAPID/{z}/{x}/{y}?token=HELWAN_UHI2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_CO22024_MAPID/{z}/{x}/{y}?token=HELWAN_CO22024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRECIP2024_MAPID/{z}/{x}/{y}?token=HELWAN_PRECIP2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRESS2024_MAPID/{z}/{x}/{y}?token=HELWAN_PRESS2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_TEMP2024_MAPID/{z}/{x}/{y}?token=HELWAN_TEMP2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_WIND2024_MAPID/{z}/{x}/{y}?token=HELWAN_WIND2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Change Detection</name>
+
+        <GroundOverlay>
+            <name>LST Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_LST_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_LST_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_UHI_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_UHI_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_CO2_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_CO2_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRECIP_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_PRECIP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_PRESS_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_PRESS_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_TEMP_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_TEMP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/HELWAN_WIND_CHANGE_MAPID/{z}/{x}/{y}?token=HELWAN_WIND_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.2</north><south>29.4</south><east>31.8</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+</Folder>
+
+<Folder>
+    <name>10th of Ramadan City</name>
+
+    <Placemark>
+        <name>10th of Ramadan City</name>
+        <styleUrl>#cityStyle</styleUrl>
+        <Point>
+            <coordinates>31.7420,30.3065,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Folder>
+        <name>Summer 2020</name>
+
+        <GroundOverlay>
+            <name>LST 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_LST2020_MAPID/{z}/{x}/{y}?token=RAMADAN_LST2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_UHI2020_MAPID/{z}/{x}/{y}?token=RAMADAN_UHI2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_CO22020_MAPID/{z}/{x}/{y}?token=RAMADAN_CO22020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRECIP2020_MAPID/{z}/{x}/{y}?token=RAMADAN_PRECIP2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRESS2020_MAPID/{z}/{x}/{y}?token=RAMADAN_PRESS2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_TEMP2020_MAPID/{z}/{x}/{y}?token=RAMADAN_TEMP2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_WIND2020_MAPID/{z}/{x}/{y}?token=RAMADAN_WIND2020_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Summer 2024</name>
+
+        <GroundOverlay>
+            <name>LST 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_LST2024_MAPID/{z}/{x}/{y}?token=RAMADAN_LST2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_UHI2024_MAPID/{z}/{x}/{y}?token=RAMADAN_UHI2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_CO22024_MAPID/{z}/{x}/{y}?token=RAMADAN_CO22024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRECIP2024_MAPID/{z}/{x}/{y}?token=RAMADAN_PRECIP2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRESS2024_MAPID/{z}/{x}/{y}?token=RAMADAN_PRESS2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_TEMP2024_MAPID/{z}/{x}/{y}?token=RAMADAN_TEMP2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_WIND2024_MAPID/{z}/{x}/{y}?token=RAMADAN_WIND2024_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Change Detection</name>
+
+        <GroundOverlay>
+            <name>LST Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_LST_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_LST_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_UHI_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_UHI_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_CO2_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_CO2_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRECIP_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_PRECIP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_PRESS_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_PRESS_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_TEMP_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_TEMP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/RAMADAN_WIND_CHANGE_MAPID/{z}/{x}/{y}?token=RAMADAN_WIND_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>30.6</north><south>30.0</south><east>32.1</east><west>31.4</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+</Folder>
+
+<Folder>
+    <name>El-Mahalla El-Kubra</name>
+
+    <Placemark>
+        <name>El-Mahalla El-Kubra</name>
+        <styleUrl>#cityStyle</styleUrl>
+        <Point>
+            <coordinates>31.1669,30.9697,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Folder>
+        <name>Summer 2020</name>
+
+        <GroundOverlay>
+            <name>LST 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_LST2020_MAPID/{z}/{x}/{y}?token=MAHALLA_LST2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_UHI2020_MAPID/{z}/{x}/{y}?token=MAHALLA_UHI2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_CO22020_MAPID/{z}/{x}/{y}?token=MAHALLA_CO22020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRECIP2020_MAPID/{z}/{x}/{y}?token=MAHALLA_PRECIP2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRESS2020_MAPID/{z}/{x}/{y}?token=MAHALLA_PRESS2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_TEMP2020_MAPID/{z}/{x}/{y}?token=MAHALLA_TEMP2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2020</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_WIND2020_MAPID/{z}/{x}/{y}?token=MAHALLA_WIND2020_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Summer 2024</name>
+
+        <GroundOverlay>
+            <name>LST 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_LST2024_MAPID/{z}/{x}/{y}?token=MAHALLA_LST2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_UHI2024_MAPID/{z}/{x}/{y}?token=MAHALLA_UHI2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_CO22024_MAPID/{z}/{x}/{y}?token=MAHALLA_CO22024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRECIP2024_MAPID/{z}/{x}/{y}?token=MAHALLA_PRECIP2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRESS2024_MAPID/{z}/{x}/{y}?token=MAHALLA_PRESS2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_TEMP2024_MAPID/{z}/{x}/{y}?token=MAHALLA_TEMP2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind 2024</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_WIND2024_MAPID/{z}/{x}/{y}?token=MAHALLA_WIND2024_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+
+    <Folder>
+        <name>Change Detection</name>
+
+        <GroundOverlay>
+            <name>LST Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_LST_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_LST_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>UHI Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_UHI_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_UHI_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>CO2 Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_CO2_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_CO2_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Precipitation Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRECIP_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_PRECIP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Pressure Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_PRESS_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_PRESS_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Temperature Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_TEMP_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_TEMP_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+
+        <GroundOverlay>
+            <name>Wind Change</name>
+            <Icon><href>https://earthengine.googleapis.com/map/MAHALLA_WIND_CHANGE_MAPID/{z}/{x}/{y}?token=MAHALLA_WIND_CHANGE_TOKEN</href></Icon>
+            <LatLonBox><north>31.3</north><south>30.6</south><east>31.5</east><west>30.8</west></LatLonBox>
+        </GroundOverlay>
+    </Folder>
+</Folder>
+
+</Document>
+</kml>
