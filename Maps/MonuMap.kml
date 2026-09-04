@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document id="EgyptianCitiesEnvironmentalAssessment">
+
+    <!-- ==================================================================== -->
+    <!-- DOCUMENT METADATA                                                     -->
+    <!-- ==================================================================== -->
+    <name>Egyptian Cities Environmental Assessment - Helwan, 10th of Ramadan, El-Mahalla El-Kubra</name>
+    <open>1</open>
+    <atom:author>
+      <atom:name>Environmental Assessment Project</atom:name>
+    </atom:author>
+    <atom:link href="https://earth.google.com/"/>
+    <description><![CDATA[
+      Illustrative LST (Land Surface Temperature) and Carbon Footprint data for three major
+      Egyptian industrial cities, together with a gazetteer of Ancient Egyptian monuments
+      and NASA/ESA satellite data overlays.<br/><br/>
+      Based on 2025-2026 geographic boundaries and environmental assessments.<br/><br/>
+      <b>Tip:</b> click a city polygon or a monument pin to open its information card.
+    ]]></description>
+    <!-- Default view: all of Egypt -->
+    <LookAt>
+      <longitude>30.8</longitude>
+      <latitude>26.0</latitude>
+      <altitude>0</altitude>
+      <heading>0</heading>
+      <tilt>0</tilt>
+      <gx:fovy>35</gx:fovy>
+      <range>2000000</range>
+    </LookAt>
+
+    <!-- ==================================================================== -->
+    <!-- STYLES                                                                -->
+    <!-- ==================================================================== -->
+
+    <!-- Helwan: highest LST (44.2 C) = RED -->
+    <Style id="city-helwan-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7d0000ff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="city-helwan-highlight">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2.0</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>a00000ff</color>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="city-helwan">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#city-helwan-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#city-helwan-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+
+    <!-- 10th of Ramadan: mid LST (41.8 C) = YELLOW -->
+    <Style id="city-tenth-ramadan-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7d00ffff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="city-tenth-ramadan-highlight">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2.0</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>a000ffff</color>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="city-tenth-ramadan">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#city-tenth-ramadan-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#city-tenth-ramadan-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+
+    <!-- El-Mahalla El-Kubra: lowest LST (38.9 C) = ORANGE -->
+    <Style id="city-mahalla-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7d00a5ff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="city-mahalla-highlight">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/paddle/orange-circle.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2.0</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>a000a5ff</color>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="city-mahalla">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#city-mahalla-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#city-mahalla-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+
+    <!-- Ancient monuments: gold pushpin -->
+    <Style id="monument-normal">
+      <IconStyle>
+        <color>ff37afd4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+        </Icon>
+        <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <h3>$[name]</h3>
+          <p>$[description]</p>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="monument-highlight">
+      <IconStyle>
+        <color>ff37afd4</color>
+        <scale>1.35</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+        </Icon>
+        <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[
+          <h3>$[name]</h3>
+          <p>$[description]</p>
+        ]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="monument">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#monument-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#monument-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+
+    <!-- ==================================================================== -->
+    <!-- DATA SCHEMA (typed fields for the three assessed cities)              -->
+    <!-- ==================================================================== -->
+    <Schema name="environmentalAssessment" id="environmental-assessment">
+      <SimpleField type="string" name="governorate">
+        <displayName>Governorate</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="lst_summer_avg">
+        <displayName>Estimated LST (Summer Avg)</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="uhi_intensity">
+        <displayName>UHI Intensity (Delta T)</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="carbon_footprint">
+        <displayName>Carbon Footprint (kTon CO2e/yr)</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="confidence_interval">
+        <displayName>Monte Carlo Confidence Interval</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="primary_industries">
+        <displayName>Primary Industries</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="population">
+        <displayName>Population</displayName>
+      </SimpleField>
+      <SimpleField type="string" name="area">
+        <displayName>Area</displayName>
+      </SimpleField>
+    </Schema>
+
+    <!-- ==================================================================== -->
+    <!-- 1. INDUSTRIAL CITIES - ENVIRONMENTAL ASSESSMENT                       -->
+    <!-- ==================================================================== -->
+    <Folder id="industrial-cities">
+      <name>Industrial Cities - Environmental Assessment</name>
+      <open>1</open>
+
+      <!-- Helwan: LST 44.2 C, UHI +4.8 C, 12,800 kTon CO2e/yr -->
+      <Placemark id="helwan">
+        <name>Helwan (حلوان)</name>
+        <description>Heavy-industrial district of southern Cairo and the hottest of the three assessed sites.</description>
+        <LookAt>
+          <longitude>31.325</longitude>
+          <latitude>29.7834</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>45</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>45000</range>
+        </LookAt>
+        <styleUrl>#city-helwan</styleUrl>
+        <ExtendedData>
+          <SchemaData schemaUrl="#environmental-assessment">
+            <SimpleData name="governorate">Cairo (Southern Area)</SimpleData>
+            <SimpleData name="lst_summer_avg">44.2 °C</SimpleData>
+            <SimpleData name="uhi_intensity">+4.8 °C</SimpleData>
+            <SimpleData name="carbon_footprint">12,800</SimpleData>
+            <SimpleData name="confidence_interval">95% [43.1, 45.3]</SimpleData>
+            <SimpleData name="primary_industries">Iron &amp; Steel, Cement, Textiles, Automotive</SimpleData>
+            <SimpleData name="population">521,239 (2017)</SimpleData>
+            <SimpleData name="area">65 km²</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Polygon>
+          <extrude>1</extrude>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                31.25,29.6667,0
+                31.40,29.6667,0
+                31.40,29.9000,0
+                31.25,29.9000,0
+                31.25,29.6667,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- 10th of Ramadan: LST 41.8 C, UHI +3.5 C, 9,200 kTon CO2e/yr -->
+      <Placemark id="tenth-of-ramadan">
+        <name>10th of Ramadan City (العاشر من رمضان)</name>
+        <description>New industrial city in Sharqia Governorate, established 1977.</description>
+        <LookAt>
+          <longitude>31.74</longitude>
+          <latitude>30.305</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>45</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>12000</range>
+        </LookAt>
+        <styleUrl>#city-tenth-ramadan</styleUrl>
+        <ExtendedData>
+          <SchemaData schemaUrl="#environmental-assessment">
+            <SimpleData name="governorate">Sharqia</SimpleData>
+            <SimpleData name="lst_summer_avg">41.8 °C</SimpleData>
+            <SimpleData name="uhi_intensity">+3.5 °C</SimpleData>
+            <SimpleData name="carbon_footprint">9,200</SimpleData>
+            <SimpleData name="confidence_interval">95% [40.7, 42.9]</SimpleData>
+            <SimpleData name="primary_industries">Textiles, Manufacturing, Logistics</SimpleData>
+            <SimpleData name="population">246,148 (2021)</SimpleData>
+            <SimpleData name="area">66 km²</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Polygon>
+          <extrude>1</extrude>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                31.71,30.28,0
+                31.77,30.28,0
+                31.77,30.33,0
+                31.71,30.33,0
+                31.71,30.28,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <!-- El-Mahalla El-Kubra: LST 38.9 C, UHI +3.1 C, 6,100 kTon CO2e/yr -->
+      <Placemark id="el-mahalla-el-kubra">
+        <name>El-Mahalla El-Kubra (المحلة الكبرى)</name>
+        <description>Textile-industry centre in the Nile Delta, home of the Misr Spinning &amp; Weaving Company.</description>
+        <LookAt>
+          <longitude>31.165</longitude>
+          <latitude>30.97</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>45</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>15000</range>
+        </LookAt>
+        <styleUrl>#city-mahalla</styleUrl>
+        <ExtendedData>
+          <SchemaData schemaUrl="#environmental-assessment">
+            <SimpleData name="governorate">Gharbia</SimpleData>
+            <SimpleData name="lst_summer_avg">38.9 °C</SimpleData>
+            <SimpleData name="uhi_intensity">+3.1 °C</SimpleData>
+            <SimpleData name="carbon_footprint">6,100</SimpleData>
+            <SimpleData name="confidence_interval">95% [38.0, 39.8]</SimpleData>
+            <SimpleData name="primary_industries">Textiles (Misr Spinning &amp; Weaving), Agriculture</SimpleData>
+            <SimpleData name="population">535,278 (2012)</SimpleData>
+            <SimpleData name="area">~50 km²</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Polygon>
+          <extrude>1</extrude>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                31.13,30.94,0
+                31.20,30.94,0
+                31.20,31.00,0
+                31.13,31.00,0
+                31.13,30.94,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+
+    <!-- ==================================================================== -->
+    <!-- 2. ANCIENT EGYPTIAN MONUMENTS &amp; HISTORICAL SITES                      -->
+    <!-- ==================================================================== -->
+    <Folder id="ancient-monuments">
+      <name>Ancient Egyptian Monuments &amp; Historical Sites</name>
+      <open>1</open>
+
+      <Folder id="giza-plateau">
+        <name>Giza Plateau</name>
+        <Placemark>
+          <name>Great Pyramid of Khufu</name>
+          <description>One of the Seven Wonders of the Ancient World, built c. 2560 BC.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.1342,29.9792,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Great Sphinx</name>
+          <description>Lion-bodied statue with a human head, believed to represent Pharaoh Khafre.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.1377,29.9753,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+
+      <Folder id="memphis-saqqara-dahshur">
+        <name>Memphis, Saqqara &amp; Dahshur</name>
+        <Placemark>
+          <name>Saqqara Step Pyramid</name>
+          <description>Djoser's Step Pyramid, the earliest colossal stone building in history.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.2161,29.8714,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Dahshur - Bent Pyramid</name>
+          <description>King Sneferu's unique bent-profile pyramid.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.2100,29.8050,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Dahshur - Red Pyramid</name>
+          <description>The first true smooth-sided pyramid, also built by Sneferu.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.2130,29.8080,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Memphis</name>
+          <description>Ancient capital of Egypt, founded by King Narmer.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.2540,29.8490,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+
+      <Folder id="thebes-luxor">
+        <name>Thebes (Luxor) - East &amp; West Bank</name>
+        <Placemark>
+          <name>Luxor Temple</name>
+          <description>Major temple complex on the east bank of the Nile, dedicated to the Theban Triad.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6390,25.7000,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Karnak Temple</name>
+          <description>The largest religious building ever constructed, the heart of ancient Thebes.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6580,25.7190,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Valley of the Kings</name>
+          <description>Royal necropolis of the New Kingdom, including Tutankhamun's tomb.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6020,25.7400,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Valley of the Queens</name>
+          <description>Burial site of royal wives and children.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.5930,25.7280,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Temple of Hatshepsut</name>
+          <description>Deir el-Bahari, the magnificent mortuary temple of the female pharaoh.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6080,25.7380,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Colossi of Memnon</name>
+          <description>Two massive stone statues of Pharaoh Amenhotep III.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6110,25.7200,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+
+      <Folder id="upper-egypt-temples">
+        <name>Upper Egypt - Edfu, Kom Ombo &amp; Philae</name>
+        <Placemark>
+          <name>Edfu Temple</name>
+          <description>Well-preserved Ptolemaic temple dedicated to the falcon god Horus.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.8730,24.9780,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Kom Ombo Temple</name>
+          <description>Double temple shared by Sobek and Horus, situated on a bend of the Nile.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.9280,24.4520,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Philae Temple</name>
+          <description>Island temple dedicated to Isis, relocated due to the Aswan High Dam.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.8840,24.0250,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+
+      <Folder id="nubia-abu-simbel">
+        <name>Nubia - Abu Simbel</name>
+        <Placemark>
+          <name>Abu Simbel - Great Temple</name>
+          <description>Ramesses II's colossal rock-cut temple, moved to save it from rising waters.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.6260,22.3370,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Abu Simbel - Small Temple</name>
+          <description>Temple of Hathor and Nefertari, the queen of Ramesses II.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.6280,22.3350,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+
+      <Folder id="abydos-dendera">
+        <name>Abydos &amp; Dendera</name>
+        <Placemark>
+          <name>Abydos - Temple of Seti I</name>
+          <description>One of the most important religious centres, with the famous Abydos King List.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>31.9190,26.1850,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark>
+          <name>Dendera Temple</name>
+          <description>Ptolemaic temple dedicated to Hathor, known for its well-preserved ceiling.</description>
+          <styleUrl>#monument</styleUrl>
+          <Point>
+            <coordinates>32.6700,26.1420,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+
+    <!-- ==================================================================== -->
+    <!-- 3. SATELLITE &amp; ENVIRONMENTAL DATA OVERLAYS                            -->
+    <!-- ==================================================================== -->
+    <!-- NOTE: gx:MapTilePyramid is a Google Earth (Web/Mobile) extension.    -->
+    <!-- Open this file in Google Earth Web to render the raster tiles;       -->
+    <!-- Google Earth Pro will show the layers as empty (transparent).        -->
+    <Folder id="data-overlays">
+      <name>Satellite &amp; Environmental Data Overlays</name>
+
+      <!-- ESA WorldCover (Google Earth Web data layer) -->
+      <GroundOverlay id="overlay-landcover">
+        <name>Land Cover (ESA WorldCover v200)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>1</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>85</north>
+          <south>-85</south>
+          <east>180</east>
+          <west>-180</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>earthdatalayer:0:CAESJDA3NmZiZDdiLWFjNDUtNDdkYS05NDkwLWRiYTdiOGRlNTQ2ZQ</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <!-- Agricultural landscape (Google Earth Web data layer) -->
+      <GroundOverlay id="overlay-agriculture">
+        <name>Agricultural Landscape Understanding</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>2</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>85</north>
+          <south>-85</south>
+          <east>180</east>
+          <west>-180</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>earthdatalayer:0:CAESJDcxN2Q1MTY5LTlhMDYtNDQ2MS1iZjNlLTBjMjQ5NjNmZTZkYw</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <!-- NASA GIBS layers: change the date segment in the URL to view another day -->
+      <GroundOverlay id="overlay-co2">
+        <name>CO2 (NASA OCO-2 via GIBS)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>3</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>31.7</north>
+          <south>22.0</south>
+          <east>36.9</east>
+          <west>24.7</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/OCO2_Lite_FP_SIF/default/2024-07-01/EPSG4326_250m/%7Bz%7D/%7By%7D/%7Bx%7D.png</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <GroundOverlay id="overlay-precipitation">
+        <name>Precipitation / Rain (NASA GIBS - IMERG)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>4</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>31.7</north>
+          <south>22.0</south>
+          <east>36.9</east>
+          <west>24.7</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/IMERG_Precipitation/default/2024-07-01/EPSG4326_250m/%7Bz%7D/%7By%7D/%7Bx%7D.png</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <GroundOverlay id="overlay-temperature">
+        <name>Surface Temperature (NASA GIBS - AIRS)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>5</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>31.7</north>
+          <south>22.0</south>
+          <east>36.9</east>
+          <west>24.7</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/AIRS_Surface_Temperature_Day/default/2024-07-01/EPSG4326_250m/%7Bz%7D/%7By%7D/%7Bx%7D.png</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <GroundOverlay id="overlay-wind">
+        <name>Wind Speed 850 hPa (NASA GIBS - MERRA-2)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>6</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>31.7</north>
+          <south>22.0</south>
+          <east>36.9</east>
+          <west>24.7</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/MERRA2_Wind_Speed_850hPa_Monthly/default/2024-07-01/EPSG4326_250m/%7Bz%7D/%7By%7D/%7Bx%7D.png</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+
+      <!-- FIXED: north/west and east values were previously swapped -->
+      <GroundOverlay id="overlay-pressure">
+        <name>Surface Pressure (NASA GIBS - MERRA-2)</name>
+        <LookAt>
+          <longitude>30.8</longitude>
+          <latitude>26.85</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <gx:fovy>35</gx:fovy>
+          <range>1500000</range>
+        </LookAt>
+        <drawOrder>7</drawOrder>
+        <Icon>
+          <href>data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==</href>
+        </Icon>
+        <LatLonBox>
+          <north>31.7</north>
+          <south>22.0</south>
+          <east>36.9</east>
+          <west>24.7</west>
+        </LatLonBox>
+        <gx:MapTilePyramid>
+          <Link>
+            <href>https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/MERRA2_Surface_Pressure_Monthly/default/2024-07-01/EPSG4326_250m/%7Bz%7D/%7By%7D/%7Bx%7D.png</href>
+          </Link>
+          <gx:minLevel>0</gx:minLevel>
+          <gx:maxLevel>22</gx:maxLevel>
+        </gx:MapTilePyramid>
+      </GroundOverlay>
+    </Folder>
+
+  </Document>
+</kml>
